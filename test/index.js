@@ -1,22 +1,21 @@
-import MyClass from '../src/index';
+import React from 'react';
+import { Debiaser } from '../src/index';
+import Enzyme, { mount, shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import assert from 'assert';
 
-describe('MyClass', () => {
-  let myClass;
+Enzyme.configure({ adapter: new Adapter() });
 
+let component;
+
+describe('Debiaser', () => {
   beforeEach(() => {
-    myClass = new MyClass();
+    component = shallow(<Debiaser />);
   });
 
-  describe('constructor', () => {
-    it('constructs', () => {
-      assert(myClass instanceof MyClass);
-    });
-  });
-
-  describe('sayHello', () => {
-    it('says hello', () => {
-      assert.equal(myClass.sayHello(), 'Hello, World!');
+  describe('dom', () => {
+    it('renders a \'hello world\'', () => {
+      assert.equal(component.find('p').length, 1);
     });
   });
 });
