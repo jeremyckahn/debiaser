@@ -1,7 +1,7 @@
 {
   "name": "js-project-starter",
   "version": "0.0.0",
-  "description": "A demonstration of modern JavaScript project structure",
+  "description": "A news reader that lets you control the level of partisan bias in your feed",
   "main": "dist/app.js",
   "scripts": {
     "build": "webpack",
