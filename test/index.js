@@ -10,12 +10,12 @@ let component;
 
 describe('Debiaser', () => {
   beforeEach(() => {
-    component = shallow(<Debiaser />);
+    component = shallow(<Debiaser articles={[]}/>);
   });
 
   describe('dom', () => {
-    it('renders a \'hello world\'', () => {
-      assert.equal(component.find('p').length, 1);
+    it('renders any content', () => {
+      assert.equal(component.find('div').length, 1);
     });
   });
 });
